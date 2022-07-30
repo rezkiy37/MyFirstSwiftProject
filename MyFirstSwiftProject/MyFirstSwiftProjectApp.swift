@@ -11,7 +11,7 @@ import SwiftUI
 struct MyFirstSwiftProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            Gestures()
+            Tabs()
         }
     }
 }
