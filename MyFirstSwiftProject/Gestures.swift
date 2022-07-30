@@ -45,7 +45,7 @@ struct Gestures: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct Gesture_Previews: PreviewProvider {
     static var previews: some View {
         Gestures()
     }
