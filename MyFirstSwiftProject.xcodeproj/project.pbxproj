@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		62317B932884B0F20075BB00 /* MyFirstSwiftProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62317B922884B0F20075BB00 /* MyFirstSwiftProjectApp.swift */; };
-		62317B952884B0F20075BB00 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62317B942884B0F20075BB00 /* ContentView.swift */; };
+		62317B952884B0F20075BB00 /* Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62317B942884B0F20075BB00 /* Gestures.swift */; };
 		62317B972884B0F60075BB00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62317B962884B0F60075BB00 /* Assets.xcassets */; };
 		62317B9A2884B0F60075BB00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62317B992884B0F60075BB00 /* Preview Assets.xcassets */; };
 		62317BA42884B0F60075BB00 /* MyFirstSwiftProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62317BA32884B0F60075BB00 /* MyFirstSwiftProjectTests.swift */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		62317B8F2884B0F20075BB00 /* MyFirstSwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstSwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62317B922884B0F20075BB00 /* MyFirstSwiftProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFirstSwiftProjectApp.swift; sourceTree = "<group>"; };
-		62317B942884B0F20075BB00 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		62317B942884B0F20075BB00 /* Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gestures.swift; sourceTree = "<group>"; };
 		62317B962884B0F60075BB00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62317B992884B0F60075BB00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		62317B9F2884B0F60075BB00 /* MyFirstSwiftProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFirstSwiftProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				62317B922884B0F20075BB00 /* MyFirstSwiftProjectApp.swift */,
-				62317B942884B0F20075BB00 /* ContentView.swift */,
+				62317B942884B0F20075BB00 /* Gestures.swift */,
 				62317B962884B0F60075BB00 /* Assets.xcassets */,
 				62317B982884B0F60075BB00 /* Preview Content */,
 			);
@@ -257,7 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62317B952884B0F20075BB00 /* ContentView.swift in Sources */,
+				62317B952884B0F20075BB00 /* Gestures.swift in Sources */,
 				62317B932884B0F20075BB00 /* MyFirstSwiftProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
