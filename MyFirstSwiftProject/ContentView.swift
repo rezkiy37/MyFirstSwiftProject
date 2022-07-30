@@ -12,16 +12,24 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Button(action:{
-                self.enabled.toggle()
-                
-            }) {
+           
                 Text("Hello, world!")
                 .padding()
                 .font(.headline)
                 .foregroundColor(.black)
+                .onTapGesture(count: 3) {
+                    print("Triple tap")
+                    
+                    enabled.toggle()
+                }
+                .gesture(LongPressGesture(minimumDuration: 2).onEnded({ ended in
+                    print("Long press gesture \(ended)")
+                }))
+                .gesture(DragGesture().onEnded({ gragValuge in
+                    print("On drag: \(gragValuge)")
+                }))
 
-            }
+            
             
             Toggle(isOn: $enabled) {
                 Text("Is it enabled: \(enabled.description)")
