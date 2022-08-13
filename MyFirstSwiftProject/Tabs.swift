@@ -24,6 +24,18 @@ struct Tabs: View {
                     Text("Authors")
                 }
                 .tag(1)
+            
+            TipCalculator()
+                .tabItem {
+                    Text("Tip calculator")
+                }
+                .tag(3)
+            
+            Alerts()
+                .tabItem {
+                    Text("Alerts")
+                }
+                .tag(3)
         }
     }
 }
