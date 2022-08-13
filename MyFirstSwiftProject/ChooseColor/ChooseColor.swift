@@ -24,7 +24,7 @@ struct ChooseColor: View {
             VStack {
                 Text(model.chooseColorTitle)
                     .fontWeight(.bold)
-                    .modifier(headlineMidifier())
+                    .headline()
                 
                 ForEach(model.randomDiapason, id: \.self) { index in
                     ColorButton(index: index, colors: model.colors) {
@@ -34,7 +34,7 @@ struct ChooseColor: View {
                 
                 Text(model.scoreTitle)
                     .fontWeight(.bold)
-                    .modifier(headlineMidifier())
+                    .headline()
             }
         }
         .alert("Answer", isPresented: $model.answerAlertShown) {
