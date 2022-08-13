@@ -33,7 +33,7 @@ struct Gestures: View {
                 
                 Toggle(isOn: $enabled) {
                     Text("Is it enabled: \(enabled.description)")
-                }
+                }.padding()
                 
                 if enabled {
                     Text("Bay, world!")
@@ -42,6 +42,7 @@ struct Gestures: View {
                         .foregroundColor(.red)
                 }
             }
+            .navigationBarTitle("Gestures", displayMode: .inline)
         }
     }
 }

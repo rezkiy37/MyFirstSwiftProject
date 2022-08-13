@@ -19,7 +19,7 @@ struct Alerts: View {
                 }.alert(isPresented: $infoAlertShown) {
                     Alert(title: Text("Info alert"), message: Text("Some message..."), dismissButton: .cancel())
                 }
-            }.navigationBarTitle("Screen with alerts")
+            }.navigationBarTitle("Alerts", displayMode: .inline)
         }
     }
 }

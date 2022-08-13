@@ -21,6 +21,7 @@ struct AuthorList: View {
                 .onDelete(perform: delete)
                 .onMove(perform: move)
             }
+            .navigationBarTitle("Author list", displayMode: .inline)
             .navigationBarItems(trailing: EditButton())
         }
     }
