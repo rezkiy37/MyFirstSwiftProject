@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class ChooseColorViewModel: ObservableObject {
+class ChooseColorModel: ObservableObject {
     let randomDiapason = 0...2
     
     @Published var colors = [

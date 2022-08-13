@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChooseColor: View {
-    @ObservedObject private var viewModel: ChooseColorViewModel
+    @ObservedObject private var model: ChooseColorModel
     
     private let controller: ChooseColorController!
     
@@ -22,37 +22,37 @@ struct ChooseColor: View {
             .edgesIgnoringSafeArea(.all)
             
             VStack {
-                Text(viewModel.chooseColorTitle)
+                Text(model.chooseColorTitle)
                     .fontWeight(.bold)
                     .modifier(headlineMidifier())
                 
-                ForEach(viewModel.randomDiapason, id: \.self) { index in
-                    ColorButton(index: index, colors: viewModel.colors) {
+                ForEach(model.randomDiapason, id: \.self) { index in
+                    ColorButton(index: index, colors: model.colors) {
                         controller.onSelect(index)
                     }
                 }
                 
-                Text(viewModel.scoreTitle)
+                Text(model.scoreTitle)
                     .fontWeight(.bold)
                     .modifier(headlineMidifier())
             }
         }
-        .alert("Answer", isPresented: $viewModel.answerAlertShown) {
+        .alert("Answer", isPresented: $model.answerAlertShown) {
             Button(role: .none) {
                 controller.onAnswerAlertConfirm()
             } label: {
                 Text("Got it")
             }
         } message: {
-            Text(viewModel.answerDescription)
+            Text(model.answerDescription)
         }
     }
     
     init() {
-        let localChooseColorViewModel = ChooseColorViewModel()
+        let localChooseColorViewModel = ChooseColorModel()
         let localChooseColorController = ChooseColorController(localChooseColorViewModel)
         
-        self.viewModel = localChooseColorViewModel
+        self.model = localChooseColorViewModel
         self.controller = localChooseColorController
     }
 }

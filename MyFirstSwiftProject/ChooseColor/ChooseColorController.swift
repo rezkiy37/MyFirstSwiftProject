@@ -9,31 +9,31 @@ import Foundation
 import UIKit
 
 class ChooseColorController: UIResponder {
-    let chooseColorViewModel: ChooseColorViewModel!
+    let model: ChooseColorModel!
     
-    init(_ chooseColorViewModel: ChooseColorViewModel) {
-        self.chooseColorViewModel = chooseColorViewModel
+    init(_ chooseColorViewModel: ChooseColorModel) {
+        self.model = chooseColorViewModel
     }
     
     func onSelect(_ index: Int) {
-        if index == chooseColorViewModel.correctAnswerIndex {
-            chooseColorViewModel.setSuccesfulAnswerDesciprion()
+        if index == model.correctAnswerIndex {
+            model.setSuccesfulAnswerDesciprion()
             
-            chooseColorViewModel.increaseScore()
+            model.increaseScore()
         } else {
-            chooseColorViewModel.setFailureAnswerDesciprion()
+            model.setFailureAnswerDesciprion()
             
-            chooseColorViewModel.decreaseScore()
+            model.decreaseScore()
         }
         
-        chooseColorViewModel.showAnswerAlert()
+        model.showAnswerAlert()
         
-        chooseColorViewModel.generateRandomCorrectAnswerIndex()
+        model.generateRandomCorrectAnswerIndex()
         
-        chooseColorViewModel.shuffleColors()
+        model.shuffleColors()
     }
     
     func onAnswerAlertConfirm () {
-        chooseColorViewModel.hideAnswerAlert()
+        model.hideAnswerAlert()
     }
 }
