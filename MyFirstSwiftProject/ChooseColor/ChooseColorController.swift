@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import UIKit
+import SwiftUI
 
 class ChooseColorController: UIResponder {
     let model: ChooseColorModel!
