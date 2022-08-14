@@ -24,7 +24,13 @@
 		6283D5B02895457100B4B3E3 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6283D5AF2895457100B4B3E3 /* Tabs.swift */; };
 		628C56C328A83AB300268489 /* HeadlineTextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628C56C228A83AB300268489 /* HeadlineTextExtension.swift */; };
 		628C56C528A83BDC00268489 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628C56C428A83BDC00268489 /* Home.swift */; };
-		628C56C828A8F9E400268489 /* PersonalExpenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628C56C728A8F9E400268489 /* PersonalExpenses.swift */; };
+		628C56C828A8F9E400268489 /* PersonalExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628C56C728A8F9E400268489 /* PersonalExpensesView.swift */; };
+		628C56CA28A95A6C00268489 /* ExpenseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628C56C928A95A6C00268489 /* ExpenseType.swift */; };
+		628C56CC28A95AAD00268489 /* ExpenseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628C56CB28A95AAD00268489 /* ExpenseModel.swift */; };
+		628C56CE28A95B0600268489 /* PersonalExpensesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628C56CD28A95B0600268489 /* PersonalExpensesViewModel.swift */; };
+		628C56D028A95B5200268489 /* AddExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628C56CF28A95B5200268489 /* AddExpenseView.swift */; };
+		628C56D228A95BFC00268489 /* AddExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628C56D128A95BFC00268489 /* AddExpenseViewModel.swift */; };
+		628C56D528A962C200268489 /* ExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628C56D428A962C200268489 /* ExpenseView.swift */; };
 		62C6883328A59EC80082B576 /* ChooseColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C6883228A59EC80082B576 /* ChooseColor.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +72,13 @@
 		6283D5AF2895457100B4B3E3 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		628C56C228A83AB300268489 /* HeadlineTextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineTextExtension.swift; sourceTree = "<group>"; };
 		628C56C428A83BDC00268489 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		628C56C728A8F9E400268489 /* PersonalExpenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalExpenses.swift; sourceTree = "<group>"; };
+		628C56C728A8F9E400268489 /* PersonalExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalExpensesView.swift; sourceTree = "<group>"; };
+		628C56C928A95A6C00268489 /* ExpenseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseType.swift; sourceTree = "<group>"; };
+		628C56CB28A95AAD00268489 /* ExpenseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseModel.swift; sourceTree = "<group>"; };
+		628C56CD28A95B0600268489 /* PersonalExpensesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalExpensesViewModel.swift; sourceTree = "<group>"; };
+		628C56CF28A95B5200268489 /* AddExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseView.swift; sourceTree = "<group>"; };
+		628C56D128A95BFC00268489 /* AddExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewModel.swift; sourceTree = "<group>"; };
+		628C56D428A962C200268489 /* ExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseView.swift; sourceTree = "<group>"; };
 		62C6883228A59EC80082B576 /* ChooseColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,9 +186,23 @@
 		628C56C628A8F9C800268489 /* PersonalExpenses */ = {
 			isa = PBXGroup;
 			children = (
-				628C56C728A8F9E400268489 /* PersonalExpenses.swift */,
+				628C56D328A961C900268489 /* AddExpenses */,
+				628C56C728A8F9E400268489 /* PersonalExpensesView.swift */,
+				628C56CD28A95B0600268489 /* PersonalExpensesViewModel.swift */,
+				628C56D428A962C200268489 /* ExpenseView.swift */,
+				628C56C928A95A6C00268489 /* ExpenseType.swift */,
+				628C56CB28A95AAD00268489 /* ExpenseModel.swift */,
 			);
 			path = PersonalExpenses;
+			sourceTree = "<group>";
+		};
+		628C56D328A961C900268489 /* AddExpenses */ = {
+			isa = PBXGroup;
+			children = (
+				628C56CF28A95B5200268489 /* AddExpenseView.swift */,
+				628C56D128A95BFC00268489 /* AddExpenseViewModel.swift */,
+			);
+			path = AddExpenses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,10 +335,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				628C56CC28A95AAD00268489 /* ExpenseModel.swift in Sources */,
 				6278160228A7B427000F8BF4 /* ChooseColorModel.swift in Sources */,
+				628C56D028A95B5200268489 /* AddExpenseView.swift in Sources */,
 				62317B952884B0F20075BB00 /* Gestures.swift in Sources */,
 				6278160028A7B293000F8BF4 /* HeadlineMidifier.swift in Sources */,
 				6283D5AE28953E4000B4B3E3 /* AuthorList.swift in Sources */,
+				628C56D228A95BFC00268489 /* AddExpenseViewModel.swift in Sources */,
+				628C56CE28A95B0600268489 /* PersonalExpensesViewModel.swift in Sources */,
 				62317B932884B0F20075BB00 /* MyFirstSwiftProjectApp.swift in Sources */,
 				62C6883328A59EC80082B576 /* ChooseColor.swift in Sources */,
 				628C56C528A83BDC00268489 /* Home.swift in Sources */,
@@ -320,9 +350,11 @@
 				6278160428A7B6B0000F8BF4 /* ChooseColorController.swift in Sources */,
 				6218DBBC289FF21B001ED9B3 /* Alerts.swift in Sources */,
 				621EC1D62899BC38009B179E /* TipCalculator.swift in Sources */,
+				628C56D528A962C200268489 /* ExpenseView.swift in Sources */,
 				628C56C328A83AB300268489 /* HeadlineTextExtension.swift in Sources */,
-				628C56C828A8F9E400268489 /* PersonalExpenses.swift in Sources */,
+				628C56C828A8F9E400268489 /* PersonalExpensesView.swift in Sources */,
 				627815FE28A7B03F000F8BF4 /* ColorButton.swift in Sources */,
+				628C56CA28A95A6C00268489 /* ExpenseType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
