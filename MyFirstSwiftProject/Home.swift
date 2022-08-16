@@ -30,6 +30,10 @@ struct Home: View {
                 NavigationLink("Choose color") {
                    ChooseColor()
                 }
+                
+                NavigationLink("Personal expenses") {
+                   PersonalExpensesView()
+                }
             }
             .navigationTitle("Home")
             .navigationBarTitleDisplayMode(.inline)

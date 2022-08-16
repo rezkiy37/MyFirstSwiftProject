@@ -31,6 +31,7 @@
 		628C56D028A95B5200268489 /* AddExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628C56CF28A95B5200268489 /* AddExpenseView.swift */; };
 		628C56D228A95BFC00268489 /* AddExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628C56D128A95BFC00268489 /* AddExpenseViewModel.swift */; };
 		628C56D528A962C200268489 /* ExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628C56D428A962C200268489 /* ExpenseView.swift */; };
+		62A1DB4F28A9658F00E72519 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A1DB4E28A9658F00E72519 /* Storage.swift */; };
 		62C6883328A59EC80082B576 /* ChooseColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C6883228A59EC80082B576 /* ChooseColor.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 		628C56CF28A95B5200268489 /* AddExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseView.swift; sourceTree = "<group>"; };
 		628C56D128A95BFC00268489 /* AddExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewModel.swift; sourceTree = "<group>"; };
 		628C56D428A962C200268489 /* ExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseView.swift; sourceTree = "<group>"; };
+		62A1DB4E28A9658F00E72519 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		62C6883228A59EC80082B576 /* ChooseColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 		62317B862884B0F20075BB00 = {
 			isa = PBXGroup;
 			children = (
+				62A1DB4D28A9656400E72519 /* Services */,
 				62317B912884B0F20075BB00 /* MyFirstSwiftProject */,
 				62317BA22884B0F60075BB00 /* MyFirstSwiftProjectTests */,
 				62317BAC2884B0F60075BB00 /* MyFirstSwiftProjectUITests */,
@@ -203,6 +206,14 @@
 				628C56D128A95BFC00268489 /* AddExpenseViewModel.swift */,
 			);
 			path = AddExpenses;
+			sourceTree = "<group>";
+		};
+		62A1DB4D28A9656400E72519 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				62A1DB4E28A9658F00E72519 /* Storage.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +354,7 @@
 				6283D5AE28953E4000B4B3E3 /* AuthorList.swift in Sources */,
 				628C56D228A95BFC00268489 /* AddExpenseViewModel.swift in Sources */,
 				628C56CE28A95B0600268489 /* PersonalExpensesViewModel.swift in Sources */,
+				62A1DB4F28A9658F00E72519 /* Storage.swift in Sources */,
 				62317B932884B0F20075BB00 /* MyFirstSwiftProjectApp.swift in Sources */,
 				62C6883328A59EC80082B576 /* ChooseColor.swift in Sources */,
 				628C56C528A83BDC00268489 /* Home.swift in Sources */,

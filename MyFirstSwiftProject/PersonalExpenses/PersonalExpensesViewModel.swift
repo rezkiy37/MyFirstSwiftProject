@@ -12,6 +12,12 @@ class PersonalExpensesViewModel: ObservableObject {
     
     @Published var items: [ExpenseModel] = []
     
+    private let EXPENSE_STORAGE_KEY = "EXPENSE"
+    
+    init() {
+        items = getExpensesFromStorage()
+    }
+    
     func showAddExpenseView() {
         addExpenseViewShown = true
     }
@@ -21,13 +27,15 @@ class PersonalExpensesViewModel: ObservableObject {
     }
     
     func addExpense(title: String, price: Double, type: ExpenseType) {
-        items.append(
-            ExpenseModel(
-                title: title,
-                price: price,
-                type: type
-            )
+        let expsense =  ExpenseModel(
+            title: title,
+            price: price,
+            type: type
         )
+        
+        items.append(expsense)
+        
+        Storage.setItem(value: items, key: EXPENSE_STORAGE_KEY)
     }
     
     func moveExpense(_ from: IndexSet, _ to: Int) {
@@ -36,5 +44,13 @@ class PersonalExpensesViewModel: ObservableObject {
     
     func removeExpense(_ offset: IndexSet) {
         items.remove(atOffsets: offset)
+        
+        Storage.clearItems(key: EXPENSE_STORAGE_KEY)
+    }
+    
+    private func getExpensesFromStorage() -> [ExpenseModel] {
+        let storageExpenses = Storage.getItems(key: EXPENSE_STORAGE_KEY, type: [ExpenseModel].self)
+        
+        return storageExpenses ?? []
     }
 }
