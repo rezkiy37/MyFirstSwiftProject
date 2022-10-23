@@ -8,6 +8,19 @@
 import Foundation
 import SwiftUI
 
+struct Tab: View {
+    let systemImageName: String
+    let title: String
+    
+    var body: some View {
+        VStack {
+            Image(systemName: systemImageName)
+            
+            Text(title)
+        }
+    }
+}
+
 struct Tabs: View {
     @State private var selectedTab = 0
     
@@ -15,25 +28,25 @@ struct Tabs: View {
         TabView(selection: $selectedTab) {
             Gestures()
                 .tabItem {
-                    Text("Gestures")
+                    Tab(systemImageName: "hand.tap", title: "Gestures")
                 }
                 .tag(0)
             
             AuthorList()
                 .tabItem {
-                    Text("Authors")
+                    Tab(systemImageName: "person", title: "Authors")
                 }
                 .tag(1)
             
             TipCalculator()
                 .tabItem {
-                    Text("Tip calculator")
+                    Tab(systemImageName: "plus.forwardslash.minus", title: "Tip calculator")
                 }
                 .tag(3)
             
             Alerts()
                 .tabItem {
-                    Text("Alerts")
+                    Tab(systemImageName: "message", title: "Alerts")
                 }
                 .tag(3)
         }
